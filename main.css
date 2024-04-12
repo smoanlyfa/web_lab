@@ -23,21 +23,27 @@ footer {background-color: yellow;
 a {
     color: black;
     text-decoration: none;
+    transition: 0.5s 1s;
 }
+
 a:link {
     color: rgb(0, 0, 255);
-    text-decoration: none;}
+    text-decoration: none;
+}
+
 a:visited {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
 a:hover {
-    color: red;
+    color: rgb(255, 0, 0);
     text-decoration: none;
+    transition: 0.3;
 }
 
 a:active {
-    color: rgb(8, 0, 255);
+    color: rgb(0, 0, 255);
     text-decoration: none;
     opacity: 0.3;
 }
