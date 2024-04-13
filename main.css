@@ -12,6 +12,9 @@ header {background-color: yellow;
     font-size: 14pt;
     margin: 10px;
     padding: 0px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 footer {background-color: yellow;
     color: rgb(0, 0, 0);
