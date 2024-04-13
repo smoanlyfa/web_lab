@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Лабораторные работы по WEB-программированию</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .speech-bubble {
+            position: absolute;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 50%;
+            padding: 10px;
+            display: none;
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .comic-container:hover .speech-bubble {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Лабораторная работа 4
+        <hr>
+    </header>
+
+    <main>
+        <div class="comic-container" style="position: relative;">
+            <img src="pepe.jpg" alt="Hero Image" style="width: 500px; height: 500px; padding: 30px; margin-left: 400px;">
+    
+            <div class="speech-bubble" style="top: 180px; left: 800px; width: 30px; height: 10px;"></div>
+            <div class="speech-bubble" style="top: 150px; left: 850px;  width: 50px; height: 20px;"></div>
+            <div class="speech-bubble" style="top: 110px; left: 915px;  width: 80px; height: 40px;"></div>
+            <div class="speech-bubble" style="top: 62px; left: 1005px;  width: 120px; height: 50px; text-align: 
+            center; font-family: 'Courier New', Courier, monospace; font-weight: bold;">Pepe!</div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html> 
