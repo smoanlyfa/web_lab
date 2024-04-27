@@ -24,6 +24,33 @@
             let hi = "Привтствую Вас на моей странице!"
             alert (hi)
         }
+        function showRazn() {
+            let inputC = document.getElementById('numberC')
+            let inputD = document.getElementById('numberD')
+
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let result = c - d
+            alert('Разность ' + c + ' и ' + d +' равна ' + result)
+        }
+        function showProiz() {
+            let inputE = document.getElementById('numberE')
+            let inputF = document.getElementById('numberF')
+
+            let e = parseInt(inputE.value);
+            let f = parseInt(inputF.value);
+            let result = e * f
+            alert('Произведение ' + e + ' на ' + f +' равно ' + result)
+        }
+        function showChastn() {
+            let inputQ = document.getElementById('numberQ')
+            let inputN = document.getElementById('numberN')
+
+            let q = parseInt(inputQ.value);
+            let n = parseInt(inputN.value);
+            let result = q / n
+            alert('Деление ' + q + ' на ' + n +' равно ' + result)
+        }
     </script>
     <style>
         .massage {
@@ -31,8 +58,16 @@
             background-color: rgba(137, 43, 226, 0.51);
             border: 2px solid blue;
             border-radius: 12px;
-            padding: 8px;
-            display: inline-block
+            padding: 3px;
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            text-align: center;
+            word-wrap: break-word;
+            font-size: 17px;
+        }
+        div {
+            font-size: 16px;
         }
         footer {
             cursor: pointer;
@@ -46,11 +81,23 @@
     </header>
     
     <main>
-        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
-       <div class="massage" onclick="showSum()">Найти сумму чисел</div>
+        <div><label>Первое число: <input type="number" value="0" id="numberA"></label><br>
+        <div><label>Второе число: <input type="number" value="0" id="numberB"></label><br></div>
+        <div class="massage" onclick="showSum()">Найти сумму чисел</div>
 
-       <div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <div><label>Первое число: <input type="number" value="0" id="numberC"></label><br></div>
+        <div><label>Второе число: <input type="number" value="0" id="numberD"></label><br></div>
+        <div class="massage" onclick="showRazn()">Найти разность чисел</div>
+
+        <div><label>Первое число: <input type="number" value="0" id="numberE"></label><br></div>
+        <div><label>Второе число: <input type="number" value="0" id="numberF"></label><br></div>
+        <div class="massage" onclick="showProiz()">Найти произведение чисел</div>
+        
+        <div><label>Первое число: <input type="number" value="0" id="numberQ"></label><br></div>
+        <div><label>Второе число: <input type="number" value="0" id="numberN"></label><br></div>
+        <div class="massage" onclick="showChastn()">Найти частность чисел</div>
+
+        <p><div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div></p>
     </main>
 
     <footer>
