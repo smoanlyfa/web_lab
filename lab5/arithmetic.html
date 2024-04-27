@@ -51,6 +51,12 @@
             let result = q / n
             alert('Деление ' + q + ' на ' + n +' равно ' + result)
         }
+        function changeOutput(buttonNum, backColor, textColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+        }
     </script>
     <style>
         .massage {
@@ -72,6 +78,12 @@
         footer {
             cursor: pointer;
         }
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -81,7 +93,7 @@
     </header>
     
     <main>
-        <div><label>Первое число: <input type="number" value="0" id="numberA"></label><br>
+        <div><label>Первое число: <input type="number" value="0" id="numberA"></label><br></div>
         <div><label>Второе число: <input type="number" value="0" id="numberB"></label><br></div>
         <div class="massage" onclick="showSum()">Найти сумму чисел</div>
 
@@ -98,6 +110,15 @@
         <div class="massage" onclick="showChastn()">Найти частность чисел</div>
 
         <p><div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div></p>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput( 1, 'blueviolet', 'white')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput( 2, 'lightgreen', 'black')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput( 3, 'yellow', 'black')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput( 4, 'pink', 'black')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer>
