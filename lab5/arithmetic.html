@@ -13,7 +13,14 @@
             alert('Сумма ' + a + ' и ' + b +' равна ' + result)
         }
 
-        showSum()
+        function showAuthor() {
+            let author = "Автор страницы: \nОпарина Софья Александровна"
+            alert (author)
+        }
+        function showHi() {
+            let hi = "Привтствую Вас на моей странице!"
+            alert (hi)
+        }
     </script>
     <style>
         .massage {
@@ -24,22 +31,25 @@
             padding: 8px;
             display: inline-block
         }
+        footer {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 4
         <hr>
     </header>
     
     <main>
        <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
-       <div class="massage">Узнать, кто автор страницы</div>
+       <div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
     <footer>
         <hr>
-        &copy; Опарина Софья, ФБИ-23, 2024
+        <div ondblclick="showHi()">&copy; Опарина Софья, ФБИ-23, 2024</div>
     </footer>
 </body>
 </html>
