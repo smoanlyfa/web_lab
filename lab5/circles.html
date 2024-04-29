@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Круги</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="icon" href="favicon-32x32.png">
+</head>
+    <script>
+        function hideCircle(circle) {
+            circle.style.opacity = '0';
+            circle.style.width = '0';
+            circle.style.height = '0';
+        }
+
+        function resetCircles() {
+            var circles = document.querySelectorAll('.circle');
+            circles.forEach(function(circle) {
+                circle.style.opacity = '1';
+                circle.style.width = '100px';
+                circle.style.height = '100px';
+            });
+        }
+
+    </script>
+
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25pt;
+            position: absolute;
+            transition: 1s;
+        }
+        button {
+            font-size: 15pt;
+        }
+    </style>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+        <hr>
+    </header>
+
+    <main>
+        <div class="circle" style="background-color:red; color: white; top: 200px; left: 300px;" onclick="hideCircle(this)">1</div>
+        <div class="circle" style="background-color: orange; color: white; top: 300px; left: 600px;" onclick="hideCircle(this)">2</div>
+        <div class="circle" style="background-color: yellow; top: 100px; left: 150px;" onclick="hideCircle(this)">3</div>
+        <div class="circle" style="background-color: green; color: white; top: 380px; left: 380px;" onclick="hideCircle(this)">4</div>
+        <div class="circle" style="background-color: blue; color: white; top: 250px; left: 450px;" onclick="hideCircle(this)">5</div>
+        <div class="circle" style="background-color: lightblue; top: 500px; left: 550px;" onclick="hideCircle(this)">6</div>
+        <div class="circle" style="background-color: blueviolet; color: white; top: 200px; left: 750px;" onclick="hideCircle(this)">7</div>
+        <div class="circle" style="background-color: brown; color: wheat; top: 300px; left: 60px;" onclick="hideCircle(this)">8</div>
+        <div class="circle" style="background-color: black; color: white; top: 80px; left: 400px;" onclick="hideCircle(this)">9</div>
+        <div class="circle" style="background-color: white; color: black; border: 2px solid; top: 460px; left: 200px;" onclick="hideCircle(this)">10</div>
+        <button onclick="resetCircles()">Сбросить</button>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
