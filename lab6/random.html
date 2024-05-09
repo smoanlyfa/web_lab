@@ -57,6 +57,18 @@
                 document.getElementById('try-count').innerHTML=count;
             }
         }
+        
+        function toggleRules() {
+            let rulesList = document.getElementById('rules-list');
+            let rulesButton = document.querySelector('.rules-button');
+            
+            if (rulesList.style.display == 'none') {
+                rulesList.style.display = 'block';
+
+            } else {
+                rulesList.style.display = 'none';
+            }
+    }
     </script>
     <style>
         .game {
@@ -74,6 +86,17 @@
             font-size: 18pt;
             color: blueviolet;
             font-family: 'Courier New', Courier, monospace;
+        }
+
+        .rules-container {
+            background-color: rgba(137, 43, 226, 0.541);
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            font-size: 14pt;
+            width: 50%;
+            margin-left: 350px;
+            margin-top: 40px;
         }
     </style>
 
@@ -111,9 +134,21 @@
                 Количество попыток: <span id="try-count"></span>
             </div>
             <div>
-                <button onclick="again()">Сыграть еще раз</button>
+                <button onclick="again()">Сыграть ещё раз</button>
             </div>
         </div>
+
+        <div class="rules-container">
+            <button onclick="toggleRules()">Показать правила игры</button>
+            <ol id="rules-list" style="display: none; color: white; font-size: 12pt;" type="I">
+                <li>Нажми на кнопку "Сыграть в игру"</li>
+                <li>Введите любое число</li>
+                <li>Нажмите на кнопку "Угадать"</li>
+                <li>Посмотрите, совпадает ли число, которое вы загадали с задуманным числом</li>
+                <li>Если хотите сыграть ещё раз, нажмите на кнопку "Сыграть ещё раз"</li>
+            </ol>
+        </div>
+
     </main>
 
     <footer>
