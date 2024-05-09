@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Лабораторные работы по WEB-программированию</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        let number;
+        let count=0;
+        function startGame() {
+            number= Math.floor(Math.random()*100)+1;
+            let screens = document.getElementsByClassName('game');
+            screens[0].style.display='none';
+            screens[1].style.display='block';
+        }
+
+        function guess() {
+            count++;
+            let input=document.getElementsByClassName('user-number');
+            let userNumber=parseInt(input.value);
+            let message = document.getElementById('result');
+            if (userNumber>number){
+                message.innerHTML='Вы ввели слишком большое число';
+            }
+            else if(userNumber<number){
+                message.innerHTML='Вы ввели слишком маленькое число';
+            }
+            else{
+                let screens=document.getElementsByClassName('game');
+                screens[1].style.display='none';
+                screens[2].style.display='block';
+                document.getElementById('number').innerHTML =number;
+                document.getElementById('try-count').innerHTML=count;
+            }
+        }
+
+        function again(params) {
+            count++;
+            let input=document.getElementsByClassName('user-number');
+            let userNumber=parseInt(input.value);
+            let message = document.getElementById('result');
+            if (userNumber>number){
+                message.innerHTML='Вы ввели слишком большое число';
+            }
+            else if(userNumber<number){
+                message.innerHTML='Вы ввели слишком маленькое число';
+            }
+            else{
+                let screens=document.getElementsByClassName('game');
+                screens[1].style.display='none';
+                screens[2].style.display='block';
+                document.getElementById('number').innerHTML =number;
+                document.getElementById('try-count').innerHTML=count;
+            }
+        }
+    </script>
+    <style>
+        .game {
+            font-size: 14pt;
+            border: 2px solid black;
+            text-align: center;
+            width: 30%;
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 10px;
+            line-height: 1.5;
+            margin-left: 500px;
+        }
+        h1 {
+            font-size: 18pt;
+            color: blueviolet;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
+    font-size: 19pt; margin: 0; line-height: 1,5">
+        Угадай число
+        <hr>
+    </header>
+
+    <main>
+        <div class="game">
+            <button onclick="startGame()">
+                Сыграть в игру
+            </button>
+        </div>
+
+        <div class="game" style="display: none;">
+            <h1>Угадай число!</h1>
+            <div>
+                Задумано число от 1 до 100. Угадай, какое?<br>
+                <input type="number" value="" min="1" max="100" id="user-number"><br>
+                <button onclick="guess()">Угадать</button>
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <div class="game" style="display: none;">
+            <div>
+                Задуманное число: <span id="number"></span>
+            </div>
+            <div>
+                Количество попыток: <span id="try-count"></span>
+            </div>
+            <div>
+                <button onclick="again()">Сыграть еще раз</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
