@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна.Перебор цветов</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        .block {
+            border: 2px solid black;
+            width: 300px;
+            height: 120px;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 1s;
+            padding: 20px;
+            background-color: yellow;
+            line-height: 1;        
+        }
+    </style>
+    <script>
+       function changeColor(div) {
+            if(div.style.backgroundColor==='yellow') {
+                div.style.backgroundColor='red'; 
+                document.getElementById('color-name').innerHTML='красный';
+            }
+            else if(div.style.backgroundColor ==='red'){
+                div.style.backgroundColor='orange';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML='оранжевый';
+            }
+            else if (div.style.backgroundColor === 'orange') {
+            div.style.backgroundColor = 'green';
+            div.style.color = 'white';
+            document.getElementById('color-name').innerHTML = 'зеленый';
+            } 
+            else if (div.style.backgroundColor === 'green') {
+            div.style.backgroundColor = 'lightblue';
+            div.style.color = 'black';
+            document.getElementById('color-name').innerHTML = 'голубой';
+            }
+            else if (div.style.backgroundColor === 'lightblue') {
+            div.style.backgroundColor = 'blue';
+            div.style.color = 'white';
+            document.getElementById('color-name').innerHTML = 'синий';
+            }
+            else if (div.style.backgroundColor === 'blue') {
+            div.style.backgroundColor = 'blueviolet';
+            div.style.color = 'white';
+            document.getElementById('color-name').innerHTML = 'фиолетовый';
+            }
+            else {
+                div.style.backgroundColor='yellow';
+                document.getElementById('color-name').innerHTML='жёлтый';
+                div.style.color = 'black';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
+    font-size: 19pt; margin: 0; line-height: 1,5">
+        Перебор цветов
+        <hr>
+    </header>
+
+    <main>
+       <div class="block" ondblclick="changeColor(this)" style="transition: 1s;">
+            <p>Цвет: <span id="color-name">жёлтый</span></p>
+            <p>Сделайте двойной щелчок, чтобы сменить цвет</p>
+       </div>
+
+
+       </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
