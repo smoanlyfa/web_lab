@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Опарина Софья Александровна. Лабораторная работа №7</title>
+    <title>Опарина Софья Александровна. Добавление блоков</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function addNewBlock() {
+            let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = 'blueviolet';
+            newBlock.style.height = '40px';
+            newBlock.style.border = '1px, solid, black'
+            newBlock.style.borderRadius = '10px'
+            newBlock.style.margin = '20px'
 
+            document.querySelector('main').appendChild(newBlock);
+        }
+    </script>
+
+    </style>
 </head>
 <body>
     <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
     font-size: 19pt; margin: 0; line-height: 1,5">
-        Лабораторная работа №7
+        Добавление блоков
         <hr>
     </header>
 
     <main>
-        <li><a href = "books.html">\Добавление блоков></a></li>
+        <button onclick="addNewBlock()">Добавление блока</button>
     </main>
 
     <footer>
