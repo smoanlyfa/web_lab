@@ -19,6 +19,26 @@
 
             document.querySelector('main').appendChild(newBlock);
         }
+
+        function addNewBlocks() {
+            let main = document.querySelector('main');
+            let blockCount = document.getElementById('blockCountInput').value; 
+            main.innerHTML = '';
+
+            for(let i = 0; i < blockCount; i++) {
+                let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = 'blueviolet';
+            newBlock.style.height = '40px';
+            newBlock.style.border = '1px solid black';
+            newBlock.style.borderRadius = '10px';
+            newBlock.style.margin = '20px';
+            newBlock.innerText = 'Блок №' + (i+1) + ': ' + (2*i**2);
+            newBlock.style.width = (200 + i * 10) + 'px';
+            
+            main.appendChild(newBlock);
+            }
+
+        }
     </script>
 
     </style>
@@ -32,6 +52,9 @@
 
     <main>
         <button onclick="addNewBlock()">Добавление блока</button>
+        <label for="blockCountInput">Количество блоков:</label>
+        <input type="number" id="blockCountInput" min="1" value="10">
+        <button onclick="addNewBlocks()">Добавить блоки</button>
     </main>
 
     <footer>
