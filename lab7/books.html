@@ -97,6 +97,38 @@
                         main.appendChild(newBlock); 
                 }
             }
+
+            function color () {
+            let inputCircles = document.getElementById('qtCircles');
+                let inCr = parseInt(inputCircles.value) || 0;
+
+                let main = document.querySelector('main');
+                for(let i = inCr; i>0; i--) {    
+                    let newBlock = document.createElement('div');
+                    newBlock.style.height = '50px';
+                    newBlock.style.border = '1px solid black';
+                    newBlock.style.borderRadius = '50%';
+                    newBlock.style.width = '50px';
+                    newBlock.style.margin = '10px 4px';
+                    newBlock.style.display = 'inline-block';
+                    newBlock.style.justifyContent = 'center';
+                    newBlock.style.alignItems = 'center';
+                    newBlock.style.textAlign = 'center';
+                    newBlock.style.fontSize = '17pt';
+                    newBlock.style.fontWeight = 'bold';
+                    newBlock.style.lineHeight = '40px';
+                    newBlock.style.color = 'black';
+
+                    if (i % 2 === 0) {
+                        newBlock.style.backgroundColor = 'blueviolet';
+                    } else {
+                        newBlock.style.backgroundColor = 'yellow';
+                    }
+
+                    newBlock.innerHTML = `${i}`
+                    main.appendChild(newBlock);
+                }
+        }
     
     </script>
     
@@ -116,6 +148,8 @@
         <button onclick="add20_50()">20 => 50</button> 
         <button onclick="add10_80(10, -80, 3)">10 => -80</button>
         <button onclick="block()">Полупрозрачные блоки</button> <br>
+        <input type="number" placeholder="Введите количество кругов" min="0" id="qtCircles">
+        <button onclick="color()">Цветные круги</button><br>
     </main>
 
     <footer>
