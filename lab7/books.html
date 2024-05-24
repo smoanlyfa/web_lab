@@ -32,6 +32,7 @@
             newBlock.style.border = '1px solid black';
             newBlock.style.borderRadius = '10px';
             newBlock.style.margin = '20px';
+            newBlock.style.color = 'white';
             newBlock.innerText = 'Блок №' + (i+1) + ': ' + (2*i**2);
             newBlock.style.width = (200 + i * 10) + 'px';
             
@@ -42,21 +43,48 @@
 
         function add20_50() {
             let main = document.querySelector('main');
-            for(let i = 20; i <= 50; i += 2.5) {
-                let newBlock = document.createElement('div');
-                newBlock.style.width = '40px';
-                newBlock.style.border = '1px solid black';
+            for (let i=20; i<=50; i+=2.5){
+                let newBlock=document.createElement('div');
+                newBlock.style.width='50px';
+                newBlock.style.border='1px solid black';
+                newBlock.style.height='40px';
+                newBlock.style.margin='10px 0px 10px 20px';
+                newBlock.style.textAlign='center';
+                newBlock.style.background='blueviolet';
+                newBlock.style.color = 'white';
 
-                newBlock = innerHTML = '${i}';
+                newBlock.innerHTML=`${i}`;
 
                 main.appendChild(newBlock);
             }
         }
-            
-        
+
+
+        function add10_80(startValue, endValue, step) {
+        let main = document.querySelector('main');
+        main.innerHTML = ''; // Очищаем содержимое main
+
+        for (let i = startValue; i >= endValue; i -= step) {
+            let circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.width = '25px';
+            circle.style.height = '25px';
+            circle.style.backgroundColor = 'blueviolet';
+            circle.style.borderRadius = '50%';
+            circle.style.display = 'inline-flex';
+            circle.style.alignItems = 'center';
+            circle.style.justifyContent = 'center';
+            circle.style.margin = '5px';
+            circle.innerText = i;
+            circle.style.fontSize = '10pt'
+
+            main.appendChild(circle);
+        }
+    }
     </script>
 
-    </style>
+        
+    
 </head>
 <body>
     <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
@@ -70,7 +98,8 @@
         <label for="blockCountInput">Количество блоков:</label>
         <input type="number" id="blockCountInput" min="1" value="10">
         <button onclick="addNewBlocks()">Добавить блоки</button>
-        <button onclick="add20_50()">20 => 50</button>
+        <button onclick="add20_50()">20 => 50</button> 
+        <button onclick="add10_80(10, -80, 3)">10 => -80</button>
     </main>
 
     <footer>
