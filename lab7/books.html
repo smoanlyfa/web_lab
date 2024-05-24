@@ -82,9 +82,23 @@
             main.appendChild(circle);
         }
     }
-    </script>
+        function block(){
+                let main = document.querySelector('main');
+                for(let i=0; i<11; i++){
+                    let newBlock = document.createElement('div');
+                        newBlock.style.backgroundColor = 'blueviolet';
+                        newBlock.style.height = '50px';
+                        newBlock.style.border = '1px solid black';
+                        newBlock.style.width = '200px';
+                        newBlock.style.opacity = `${0 + i*10}%`;
+                        newBlock.style.margin = '10px 0';
 
-        
+                        newBlock.innerHTML = `Блок № ${i}`;
+                        main.appendChild(newBlock); 
+                }
+            }
+    
+    </script>
     
 </head>
 <body>
@@ -101,6 +115,7 @@
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20 => 50</button> 
         <button onclick="add10_80(10, -80, 3)">10 => -80</button>
+        <button onclick="block()">Полупрозрачные блоки</button> <br>
     </main>
 
     <footer>
