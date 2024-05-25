@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function weatherNsk() {
+            const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.934596&current=temperature_2m&hourly=temperature_2m&timezone=Asia%2FBangkok&forecast_days=1';
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const times = data.hourly.time;
+                    const temperatures = data.hourly.temperature_2m;
+
+                    const timeIndices = {
+                        '08:00': times.findIndex(time => time.endsWith('T08:00')),
+                        '12:00': times.findIndex(time => time.endsWith('T12:00')),
+                        '20:00': times.findIndex(time => time.endsWith('T20:00'))
+                    };
+
+                    const weatherHTML = `
+                        <div class="table">
+                            <h2>Температура в Новосибирске:</h2>
+                            <div>В 8.00: ${temperatures[timeIndices['08:00']]}°C</div>
+                            <div>В 12.00: ${temperatures[timeIndices['12:00']]}°C</div>
+                            <div>В 20.00: ${temperatures[timeIndices['20:00']]}°C</div>
+                        </div>
+                    `;
+
+                    document.getElementById('output').innerHTML = weatherHTML;
+                })
+                .catch(error => {
+                    console.error('Error fetching weather data:', error);
+                    document.getElementById('weather-info').innerHTML = '<p>Ошибка при получении данных о погоде.</p>';
+                });
+        }
+    </script>
+
+    <style>
+        .table {
+            border: 2px solid black;
+            width: 30%;
+            text-align: center;
+        }
+        .table h2 {
+            font-size: 18pt;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button{
+            margin: 10px 10px 10px 10px;
+            background-color: rgba(137, 43, 226, 0.811);
+            color: white;
+            font-size: 14pt;
+            width: 200px;
+            height: 50px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
+    font-size: 19pt; margin: 0; line-height: 1,5">
+        Прогноз погоды
+        <hr>
+    </header>
+
+    <main>
+        <button onclick="weatherNsk()">Прогноз погоды в Новосибирске</button>
+        <div id="output"></div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
