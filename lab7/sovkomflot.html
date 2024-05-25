@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Лабораторная работа №7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function sovkomflot() {
+            const prices = [
+                135.60, 136.03, 136.18, 135.80, 133.26,
+                132.84, 132.51, 132.38, 134.00
+            ];
+            const dates = [
+                '14.05.2024', '15.05.2024', '16.05.2024', '17.05.2024', '20.05.2024',
+                '21.05.2024', '22.05.2024', '23.05.2024', '24.05.2024', 
+            ];
+
+            let table = document.getElementById('table');
+            let maxPrice = prices[0];
+            let minPrice = prices[0];
+            for(let i = 0; i < prices.length; i++) {
+                let tr = document.createElement('tr'); 
+                let tdPrice = document.createElement('td');
+                let tdDate = document.createElement('td');
+                let tdDiff = document.createElement('td');
+                tdDate.innerText = dates[i];
+                tdPrice.innerText = prices[i];
+
+                if (i > 0) {
+                    let diff = prices[i] - prices[i - 1];
+                    tdDiff.innerText = diff.toFixed(1);
+                } else {
+                    tdDiff.innerText = '-';
+                }
+
+                tr.appendChild(tdDate);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdDiff);
+                table.appendChild(tr);
+
+                if (prices[i] > maxPrice) {
+                    maxPrice = prices[i];
+                }
+                if (prices[i] < minPrice) {
+                    minPrice = prices[i];
+                }
+            }
+            
+            let sum = 0;
+            for(let i = 0; i < prices.length; i++) {
+                sum += prices[i]; 
+            }
+            let average = (sum / prices.length).toFixed('1');
+
+            let averageRes = document.getElementById('average');
+            averageRes.innerHTML = `Среднее значение: ${average}`;
+
+            let minRes = document.getElementById('min');
+            minRes.innerHTML = `Минимальное значение: ${minPrice.toFixed(2)}`;
+
+            let maxRes = document.getElementById('max');
+            maxRes.innerHTML = `Максимальное значение: ${maxPrice.toFixed(2)}`;                
+        }
+    </script>
+       <style>
+        table {
+            border: 2px solid black;
+            width: 40%;
+            font-size: 13pt;
+            text-align: center;
+        }
+        button{
+            margin: 10px 10px 10px 10px;
+            background-color: rgba(137, 43, 226, 0.811);
+            color: white;
+            font-size: 14pt;
+            width: 200px;
+            height: 50px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
+    font-size: 19pt; margin: 0; line-height: 1,5">
+        Совкомфлот
+        <hr>
+    </header>
+
+    <main>
+        <button onclick="sovkomflot()">Курс акций Совкомфлот</button>
+        <table border="1" id="table"></table>
+        <div id="average"></div>
+        <div id="min"></div>
+        <div id="max"></div>
+    </main>
+        
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
