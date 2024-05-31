@@ -1,0 +1,86 @@
+.main {
+    padding-bottom: 150px;
+    margin-bottom: 30px;
+}
+
+.main-content {
+    background-image: url("../images/photo_07.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+    padding-bottom: 150px;
+}
+
+.main-text {
+    width: 473px;
+    height: 340px;
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 2px;
+}
+
+.main-title {
+    color: #000;
+    margin-top: 125px;
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: 25px;
+}
+
+.main-description {
+    font-size: 15px;
+    padding-left: 25px;
+    line-height: 1.5;
+    margin-top: 7px;
+    color: #000;
+    margin-left: 25px;
+}
+
+.button:hover {
+    background-color: #ca1920;
+}
+
+.button {
+    padding: 18px 38px;
+    text-align: center;
+    background-color: #ed1c24;
+    cursor: pointer;
+    width: 397px;
+    margin-top: 51px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button a {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.history {
+    padding-bottom: 100px;
+}
+
+.history-title {
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 46px;
+    font-weight: 200;
+}
+
+.history-text {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 1080px;
+}
+
+.history-point {
+    margin-bottom: 20px;
+}
+
+.history-point a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}

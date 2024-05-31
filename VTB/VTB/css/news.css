@@ -1,0 +1,99 @@
+.menu-item a:hover {
+  border-color: #333333;
+}
+
+.menu-item a {
+  color: #333333;
+}
+
+.news-title {
+  color: #000;
+  line-height: 1.25;
+  margin: 2.60417vw 0;
+  margin-left: 81px;
+  font-size: 46px;
+  font-weight: 200;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1296px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.card {
+  width: 240px;
+  margin: 12px;
+  background-color: #fff;
+  padding: 0 0 10px 0;
+  min-height: 20.83333vw;
+}
+
+.card-image {
+  text-align: center;
+}
+
+.card-image svg {
+  width: 240px;
+  height: 252px;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  font-size: 13px;
+  color: #2f3441;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 13px;
+  width: 270px;
+  line-height: 1.5;
+  font-size: 15px;
+  color: #000000;
+  text-align: justify;
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  width: 235px;
+  margin: 10px auto;
+}
+
+.button:hover {
+  color: #0af;
+  transition: 0.3s;
+}
+
+.button {
+  color: #000;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.card-text-next {
+  margin-top: 10px;
+  font-weight: 400;
+  margin-bottom: 13px;
+  width: 270px;
+  line-height: 1.5;
+  display: none;
+  font-size: 15px;
+  color: #000000;
+  text-align: justify;
+}

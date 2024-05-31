@@ -1,0 +1,64 @@
+.converter-block {
+    margin: 0 auto;
+    height: 850px;
+    background-color: #ffffff;
+    padding-top: 20px;
+    width: 1400px;
+    margin-bottom: 20px;
+}
+
+.converter-block h2 {
+    line-height: 1.25;
+    margin-bottom: 1.5625vw;
+    margin-top: 40px;
+    text-align: center;
+    color: #000;
+    font-size: 46px;
+    font-weight: 200;
+}
+
+.coverter-inputs-to {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.converter-inputs-from {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.converter-input::placeholder {
+    color: #1e4bd2;
+}
+
+.converter-input {
+    width: 60%;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    outline: 0;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    color: #1e4bd2;
+    border: 1px solid #acb6c3;
+    border-radius: 3px;
+}
+
+.converter-input.button {
+    cursor: pointer;
+    width: 300px;
+    color: #fff;
+    padding: 18px 38px;
+    text-align: center;
+    background-color: #1e4bd2;
+    border-radius: 10px;
+}
+
+
+.menu-item a:hover {
+    border-color: #333333;
+}
+
+.menu-item a {
+    color: #333333;
+}
