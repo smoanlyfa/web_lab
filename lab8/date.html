@@ -8,17 +8,42 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
-
+    <script src="lab8.js"></script>
+    <style>
+        li{
+            padding: 10px 20px 20px 10px;
+        }  
+        
+        .frame {
+            border: 3px solid rgb(85, 0, 78);
+            background-color: blueviolet;
+            padding: 30px;
+            width: fit-content;
+            margin: 10px 10px 10px 10px;
+            text-align: justify;
+            color: white;
+        }
+        .daysWeek {
+            border: 3px solid rgba(103, 31, 170, 0.651);
+            border-radius: 90px;
+            background-color: rgb(138, 177, 228);
+            padding: 30px;
+            width: fit-content;
+            margin: 10px 10px 10px 10px;
+            text-align: justify;
+        }
+        
+    </style>
 </head>
-<body>
+<body onload="showDate()">
     <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
     font-size: 19pt; margin: 0; line-height: 1,5">
-        Лабораторная работа №8
+       Дата
         <hr>
     </header>
 
     <main>
-        <li><a href = "date.html">Дата></a></li>
+        <div id="current-date"></div><br>
        
     </main>
 
