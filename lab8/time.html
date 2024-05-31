@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опарина Софья Александровна. Лабораторная работа №8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script src="lab8.js"></script>
+    <style>
+        #time {
+            position: absolute;
+            height: 40px;
+            width: 200px;
+            top: 100px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            padding: 8px;
+            background-color: rgba(137, 43, 226, 0.799);
+            border-radius: 8px;
+            box-shadow: 4px 2px 2px rgba(247, 247, 247, 0.3);
+        }
+        #seconds {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 250px;
+            font-weight: bold;
+            color: blueviolet;
+           
+        }
+    
+        
+    </style>
+</head>
+<body onload="showDate()">
+    <header style="text-align: center; font-family:'Courier New', Courier, monospace; font-weight: bold; 
+    font-size: 19pt; margin: 0; line-height: 1,5">
+       Время
+        <hr>
+    </header>
+
+    <main>
+        <body onload="showTime()">
+            <header>
+                <div id="time">00:00:00</div>
+            </header>
+        
+            <main>
+                <div id="seconds"></div>
+                <div class="clock">
+                    <div id="second-hand"></div>
+                </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Опарина Софья, ФБИ-23, 2024
+    </footer> 
+</body>
+</html>
